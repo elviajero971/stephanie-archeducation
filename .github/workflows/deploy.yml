@@ -25,7 +25,7 @@ jobs:
           docker buildx build --platform linux/arm/v7 \
           --build-arg RAILS_MASTER_KEY=$RAILS_MASTER_KEY \
           --build-arg SECRET_KEY_BASE=$SECRET_KEY_BASE \
-          --tag elviajero34/stephanieh-portfolio:latest . \
+          --tag elviajero34/stephanie-archeducation-portfolio:latest . \
           --push
 
       # Transfer docker-compose.yml to Raspberry Pi
@@ -34,7 +34,7 @@ jobs:
           RASPBERRY_PI_IP: ${{ secrets.RASPBERRY_PI_IP }}
           RASPBERRY_PI_PASSWORD: ${{ secrets.RASPBERRY_PI_PASSWORD }}
         run: |
-          sshpass -p $RASPBERRY_PI_PASSWORD scp -o StrictHostKeyChecking=no docker-compose.yml pi@$RASPBERRY_PI_IP:/var/www/html/stephaniehportfolio/
+          sshpass -p $RASPBERRY_PI_PASSWORD scp -o StrictHostKeyChecking=no docker-compose.yml pi@$RASPBERRY_PI_IP:/var/www/html/stephaniearcheducationportfolio/
 
       # Transfer nginx.conf to Raspberry Pi
       - name: Transfer nginx.conf to Raspberry Pi
@@ -42,7 +42,7 @@ jobs:
           RASPBERRY_PI_IP: ${{ secrets.RASPBERRY_PI_IP }}
           RASPBERRY_PI_PASSWORD: ${{ secrets.RASPBERRY_PI_PASSWORD }}
         run: |
-          sshpass -p $RASPBERRY_PI_PASSWORD scp -o StrictHostKeyChecking=no nginx.conf pi@$RASPBERRY_PI_IP:/var/www/html/stephaniehportfolio/
+          sshpass -p $RASPBERRY_PI_PASSWORD scp -o StrictHostKeyChecking=no nginx.conf pi@$RASPBERRY_PI_IP:/var/www/html/stephaniearcheducationportfolio/
 
       # Deploy the application on Raspberry Pi
       - name: SSH into Raspberry Pi and deploy
@@ -52,13 +52,13 @@ jobs:
         run: |
           sshpass -p $RASPBERRY_PI_PASSWORD ssh -o StrictHostKeyChecking=no  pi@$RASPBERRY_PI_IP << 'EOF'
             # Pull the latest Docker image from Docker Hub
-            docker pull elviajero34/stephanieh-portfolio:latest
+            docker pull elviajero34/stephanie-archeducation-portfolio:latest
 
             # Clean up old images
             docker image prune -af
 
             # Navigate to the app directory
-            cd /var/www/html/stephaniehportfolio
+            cd /var/www/html/stephaniearcheducationportfolio
 
             # Stop and remove old containers
             docker-compose down --remove-orphans
@@ -67,8 +67,8 @@ jobs:
             docker-compose up -d
 
             # Create a new database if it doesn't exist
-            docker exec stephaniehportfolio-app-1 bundle exec rake db:create RAILS_ENV=production
+            docker exec stephaniearcheducationportfolio-app-1 bundle exec rake db:create RAILS_ENV=production
 
             # Run database migrations
-            docker exec stephaniehportfolio-app-1 bundle exec rake db:migrate RAILS_ENV=production
+            docker exec stephaniearcheducationportfolio-app-1 bundle exec rake db:migrate RAILS_ENV=production
           EOF
