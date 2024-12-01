@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     root "pages#home"
     get "portfolio", to: "pages#portfolio"
     get "gallery", to: "pages#gallery"
+    get "teaching", to: "pages#teaching"
   end
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

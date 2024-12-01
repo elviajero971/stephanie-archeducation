@@ -1,12 +1,13 @@
 en:
   navbar:
     name: "Stéphanie El Hourany"
-    title: "Architect D.E."
+    title: "Architect, designer & builder"
     portfolio: "Portfolio"
     gallery: "Gallery"
+    teaching: "Teaching statement"
     switch_language: "Français"
   footer:
-    contact_message: "Want to collaborate or say hello?"
+    contact_message: "Would you like to collaborate or have a chat ?"
     contact_cta: "Contact me on LinkedIn"
   pages:
     home:
@@ -16,7 +17,10 @@ en:
       text_2: "I adapt to various projects ranging from the design of tertiary buildings to the rehabilitation of housing or cultural establishments. My approach is based on the active use of technologies to optimize my processes, and on rigorous management of each project."
       text_3: "Co-founder of U/LAb, urban laboratory for emerging practices in the profession, I am committed to an architecture where a human approach and a passion for the act of “building” coexist."
     portfolio:
-      title: "Architecture portfolio"
+      title: "Relevant projects and educational work"
+      text_1: "To view the portfolio online please follow the link below :"
+      text_2: "www.issuu.com/elhourany"
+      text_3: "You can download the full pdf here !"
     gallery:
       title: "Image gallery"
       text_1: "Welcome to my universe:"

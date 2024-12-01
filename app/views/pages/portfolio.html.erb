@@ -1,27 +1,14 @@
-<section class="portfolio-section" data-controller="image-modal">
+<section class="portfolio-section">
   <div class="portfolio-content">
     <h1><%= t('pages.portfolio.title') %></h1>
-    <div class="portfolio-images">
-      <% (1..17).each do |i| %>
-        <div
-          class="portfolio-image-container"
-          data-action="click->image-modal#open"
-          data-image-modal-src="<%= asset_path("#{i}.jpg") %>">
-          <%= image_tag "#{i}.jpg", alt: "Image #{i}", class: "portfolio-image" %>
-        </div>
-      <% end %>
+    <div class="portfolio-image">
+      <%= image_tag('image-portfolio.png', alt: 'Portfolio Image', class: 'portfolio-image') %>
     </div>
+    <div>
+      <%= t('pages.portfolio.text_1') %>
+      <%= t('pages.portfolio.text_2') %>
+      <%= t('pages.portfolio.text_3') %>
+    </div>
+    <p></p>
   </div>
-
-  <!-- Fullscreen Modal -->
-  <dialog class="image-modal" data-image-modal-target="modal">
-    <div class="close-button" data-action="click->image-modal#close">&times;</div>
-    <div class="image-wrapper" data-image-modal-target="imageWrapper">
-      <img class="modal-image" data-image-modal-target="image" alt="Zoomed Image">
-    </div>
-    <div class="zoom-controls">
-      <button data-action="click->image-modal#zoomIn" class="zoom-in">+</button>
-      <button data-action="click->image-modal#zoomOut" class="zoom-out">-</button>
-    </div>
-  </dialog>
 </section>
