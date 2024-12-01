@@ -20,15 +20,18 @@
       justify-content: center;
 
       .portfolio-image {
-        width: 100%; /* Full width */
-        height: auto; /* Maintain aspect ratio */
-        cursor: zoom-in; /* Change pointer to zoom */
-        transition: transform 0.3s ease;
-
-        &:hover {
-          transform: scale(1.05); /* Slight zoom on hover */
-        }
+        width: 100%;
+        height: auto;
       }
+    }
+
+    .portfolio-text {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #666;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
   }
 }

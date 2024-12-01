@@ -1,13 +1,15 @@
 <section class="portfolio-section">
   <div class="portfolio-content">
     <h1><%= t('pages.portfolio.title') %></h1>
-    <div class="portfolio-image">
-      <%= image_tag('image-portfolio.png', alt: 'Portfolio Image', class: 'portfolio-image') %>
+    <div class="portfolio-images">
+      <div class="portfolio-image-container">
+        <%= image_tag "image-portfolio.png", alt: "Image mportfolio", class: "portfolio-image" %>
+      </div>
     </div>
-    <div>
-      <%= t('pages.portfolio.text_1') %>
-      <%= t('pages.portfolio.text_2') %>
-      <%= t('pages.portfolio.text_3') %>
+    <div class="portfolio-text">
+      <p><%= t('pages.portfolio.text_1') %></p>
+      <p><%= t('pages.portfolio.text_2') %></p>
+      <p><%= t('pages.portfolio.text_3') %></p>
     </div>
     <p></p>
   </div>
