@@ -1,6 +1,7 @@
 .nav-link {
   text-decoration: none;
   color: black;
+
   &:hover {
     color: darkgray;
   }
@@ -25,7 +26,8 @@
   align-items: center;
   padding: 0 40px;
   height: 90px;
-  background-color: white;
+  background-color: #eaeaea;
+
   z-index: 30;
 
   .navbar-right {

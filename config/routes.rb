@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  scope "(:locale)", locale: /en|fr/ do
+  scope "(:locale)", locale: /en/ do
     root "pages#home"
     get "portfolio", to: "pages#portfolio"
     get "gallery", to: "pages#gallery"

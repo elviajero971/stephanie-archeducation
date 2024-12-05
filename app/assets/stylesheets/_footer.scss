@@ -7,20 +7,55 @@
 
   .footer-content{
     display: flex;
-    flex-direction: column;
     align-items: center;
     line-height: 1.6;
-    .linkedin-btn {
-      .logo {
-        width: 20px;
-        height: 20px;
-      }
+    gap: 60px;
+
+    .content-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 60px;
     }
 
-    .issuu-btn {
-      .logo {
-        width: 20px;
-        height: 20px;
+    .content-right {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+
+      .linkedin-btn {
+        .logo {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .issuu-btn {
+        .logo {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-section {
+    height: 130px;
+    padding: 0 30px;
+
+    .footer-content {
+      flex-direction: column;
+      gap: 20px;
+
+      .content-left {
+        margin: 0;
+      }
+
+      .content-right {
+        gap: 20px;
       }
     }
   }

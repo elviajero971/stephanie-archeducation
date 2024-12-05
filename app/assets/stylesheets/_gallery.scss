@@ -3,22 +3,50 @@ section.gallery-section {
   flex-direction: column;
   flex: 1;
   align-items: center;
-  margin: 0 350px;
+  margin: 0 180px;
   text-align: center;
 
+  .gallery-text{
+    margin: 0 200px;
     h1 {
-        margin-bottom: 30px;
+      margin-bottom: 30px;
     }
 
     p {
       line-height: 1.6;
     }
+  }
+
+
+  .gallery-images {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping of images */
+    gap: 2rem; /* Set the gap between images */
+    justify-content: center; /* Center the images horizontally */
+
+    .portfolio-image {
+      width: 280px; /* Fixed width for each image */
+      height: 280px; /* Fixed height for each image */
+      object-fit: cover; /* Ensure the image fills the box without distortion */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for aesthetics */
+      transition: transform 0.3s ease; /* Optional: Smooth zoom effect on hover */
+      cursor: zoom-in; /* Change pointer to zoom */
+      &:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+      }
+    }
+  }
 }
 
 // media queries
 @media screen and (max-width: 768px) {
   section.gallery-section {
     margin: 0 40px;
+
+    .gallery-text {
+      margin: 0
+    }
   }
 }
 

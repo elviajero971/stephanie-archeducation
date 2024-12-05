@@ -9,8 +9,14 @@
     <div class="portfolio-text">
       <p><%= t('pages.portfolio.text_1') %></p>
       <p><%= t('pages.portfolio.text_2') %></p>
-      <p><%= t('pages.portfolio.text_3') %></p>
+      <p>
+        <%= t(
+              'pages.portfolio.text_3_html',
+              url: link_to('here', asset_path('optimized.pdf'), class: 'download-link', target: '_blank')
+            ).html_safe %>
+      </p>
     </div>
+
     <p></p>
   </div>
 </section>

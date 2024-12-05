@@ -1,5 +1,29 @@
-<section class="gallery-section">
-  <h1><%= t('pages.gallery.title') %></h1>
-  <p><%= t('pages.gallery.text_1') %></p>
-  <p><%= t('pages.gallery.text_2') %></p>
+<section class="gallery-section" data-controller="lazy-image">
+  <div class="gallery-text">
+    <h1><%= t('pages.gallery.title') %></h1>
+    <p><%= t('pages.gallery.text_1') %></p>
+  </div>
+
+  <div class="gallery-images">
+    <% (1..28).each do |i| %>
+      <div
+        class="thumbnail-container"
+        data-action="click->lazy-image#open"
+        data-lazy-image-full-src="<%= asset_path("gallery/large_gallery_#{i}.png") %>">
+        <!-- Thumbnail image -->
+        <%= image_tag "gallery/small_gallery_#{i}.png",
+                      alt: "Image #{i}",
+                      class: "portfolio-image",
+                      loading: "lazy" %>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- Fullscreen Modal -->
+  <dialog class="image-modal" data-lazy-image-target="modal">
+    <div class="close-button" data-action="click->lazy-image#close">&times;</div>
+    <img class="modal-image" data-lazy-image-target="image" alt="Fullscreen Image">
+  </dialog>
 </section>
+
+
