@@ -3,7 +3,7 @@ section.gallery-section {
   flex-direction: column;
   flex: 1;
   align-items: center;
-  margin: 0 180px;
+  margin: 3rem 180px;
   text-align: center;
 
   .gallery-text{
@@ -108,7 +108,7 @@ section.gallery-section {
 // media queries
 @media screen and (max-width: 768px) {
   section.gallery-section {
-    margin: 0;
+    margin: 2rem;
     .gallery-text {
       margin: 0
     }
@@ -137,5 +137,11 @@ section.gallery-section {
         right: 10px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section.gallery-section {
+    margin: 2rem 1rem;
   }
 }

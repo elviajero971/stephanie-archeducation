@@ -2,9 +2,10 @@
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  width: 100%;
 
   .portfolio-content {
-    margin: 0 94px;
+    margin: 3rem 94px;
     text-align: center;
     justify-content: center;
 
@@ -31,7 +32,7 @@
       color: #666;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 30px;
 
       .download-link {
         color: #666;
@@ -50,8 +51,7 @@
 @media screen and (max-width: 768px) {
   .portfolio-section {
     .portfolio-content {
-      margin: 0 20px;
-
+      margin: 3rem 20px;
       h1 {
         margin-bottom: 20px;
       }

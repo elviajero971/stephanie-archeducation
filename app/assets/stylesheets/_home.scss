@@ -67,8 +67,7 @@
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
   .hero-section {
-    height: auto; /* Allow the section to expand naturally */
-    padding: 15px;
+    height: auto;
 
     .hero-landing {
       height: auto;
@@ -77,6 +76,7 @@
     .content {
       flex-direction: column; /* Stack columns vertically */
       gap: 20px;
+      margin: 0 3rem;
 
       .content-left .profile-picture {
         width: 100px;
@@ -87,10 +87,18 @@
 }
 
 @media screen and (max-width: 480px) {
-  .content {
-    .content-left .profile-picture {
-      width: 80px;
-      height: 80px;
+  .hero-section {
+    .content {
+      margin: 2rem 0;
+
+      .content-left .profile-picture {
+        width: 150px;
+        height: 150px;
+      }
+
+      .content-right {
+        margin: 0 1rem;
+      }
     }
   }
 }

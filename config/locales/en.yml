@@ -18,7 +18,7 @@ en:
       text_4: "Teaching design & build is a natural extension of my professional practice. By guiding students through the challenges of translating ideas into built realities, I hope to inspire the next generation of architects to think critically, design responsibly, and build innovatively."
     teaching_statement:
       title: "Teaching statement"
-      subtitle: "Building beyond the blueprint : A hands-on approach to Architectural education"
+      subtitle: "Building beyond the blueprint\u00a0: A hands-on approach to Architectural education"
       intro_1: "At the heart of my career is a commitment to a socially responsible architecture and a hands-on education that leads to it."
       intro_2: "In my teaching, I prioritize an experimental mindset that embraces failure as a valuable part of learning. It’s about guiding students making designs come to life, teaching them to work collaboratively with stakeholders and community members, and developing entrepreneurial spirits. Each step of this journey helps them realize they are not just designing for people, but with them."
       intro_3: "The ultimate reward of a design/build culture within academia lies in the tangible results: achieving a built prototype fosters pride and confidence. I am driven to cultivate this confidence in the next generation of architects, empowering them to take an active role in shaping the built environment and our future cities."
@@ -39,10 +39,11 @@ en:
       conclusion_3: "My belief in students’ immense potential drives my passion for teaching. University years are a unique opportunity to push limits, discover new passions, and evolve. I was fortunate to be guided by great mentors who shaped the architect and educator I’ve become, and I am committed to creating that same framework for emerging architects. In an evolving profession shaped by new technologies and economic realities, I aim to contribute to a pedagogy that explores the infinite possibilities of what it means to be an architect today."
     portfolio:
       title: "Relevant projects and educational work"
-      text_1: "To view the portfolio online please follow the link below :"
-      text_2: "www.issuu.com/elhourany"
-      text_3_html: "You can download the full PDF %{url}!"
+      text_1_html: "To view the portfolio online please follow %{url}"
+      link_text_1: "this issuu link"
+      text_2_html: "You can download the full PDF %{url}"
+      link_text_2: "here"
     gallery:
       title: "Media gallery"
-      text_1: "Here is a peak into projects and workshops i have led or contributed to, from building sites to participatory construction, design & build collaborations, events i took part in, relevant initiatives and technical training sessions (traditional masonry, Adobe, earth and straw, wooden structures, etc...)."
+      text_1: "Here is a peak into projects and workshops I have led or contributed to, from building sites to participatory construction, design & build collaborations, events I took part in, relevant initiatives and technical training sessions (traditional masonry, Adobe, earth and straw, wooden structures, etc...)."
 

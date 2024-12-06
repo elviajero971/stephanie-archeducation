@@ -7,12 +7,16 @@
       </div>
     </div>
     <div class="portfolio-text">
-      <p><%= t('pages.portfolio.text_1') %></p>
-      <p><%= t('pages.portfolio.text_2') %></p>
       <p>
         <%= t(
-              'pages.portfolio.text_3_html',
-              url: link_to('here', asset_path('optimized.pdf'), class: 'download-link', target: '_blank')
+              'pages.portfolio.text_1_html',
+              url: link_to(t('pages.portfolio.link_text_1'), "https://issuu.com/stephanieelhourany/docs/design_build_portfolio2024", class: 'download-link', target: '_blank')
+            ).html_safe %>
+      </p>
+      <p>
+        <%= t(
+              'pages.portfolio.text_2_html',
+              url: link_to(t('pages.portfolio.link_text_2'), asset_path('design_and_build_portfolio_2024.pdf'), class: 'download-link', target: '_blank')
             ).html_safe %>
       </p>
     </div>

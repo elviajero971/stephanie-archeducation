@@ -1,6 +1,6 @@
 .teaching-section {
   max-width: 1400px; /* Center and limit width */
-  margin: 0 auto; /* Center horizontally */
+  margin: 3rem auto; /* Center horizontally */
   font-family: 'Raleway', sans-serif;
   color: #333;
   line-height: 1.8; /* Improve readability */
@@ -47,11 +47,11 @@
     height: auto;
     margin: 2rem 0;
   }
+}
 
-  /* Responsive Design */
-  @media screen and (max-width: 768px) {
-    padding: 1.5rem;
-
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .teaching-section {
     h1 {
       font-size: 2rem;
     }
@@ -69,9 +69,11 @@
       line-height: 1.6;
     }
   }
+}
 
-  @media screen and (max-width: 480px) {
-    padding: 1rem;
+@media screen and (max-width: 480px) {
+  .teaching-section {
+    margin: 2rem 20px; /* Reduce margin */
 
     h1 {
       font-size: 1.8rem;
