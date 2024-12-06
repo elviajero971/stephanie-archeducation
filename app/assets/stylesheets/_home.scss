@@ -5,20 +5,19 @@
   justify-content: center;
 
   .hero-landing {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 90px); /* Full viewport height minus any header */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; /* Needed for absolutely positioned iframe */
 
-    .ext-video-player {
-      iframe {
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-      }
+    .ext-video-player iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -27,10 +26,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 30px; /* Spacing between columns */
+    gap: 30px;
     margin: 54px 0;
     width: 100%;
-    max-width: 1200px; /* Limit content width for better layout */
+    max-width: 1200px;
 
     .content-left {
       display: flex;
@@ -41,7 +40,7 @@
       .profile-picture {
         width: 274px;
         height: 274px;
-        border-radius: 50%; /* Make it circular */
+        border-radius: 50%; /* Circular */
         object-fit: cover;
       }
     }
@@ -71,14 +70,21 @@
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
   .hero-section {
-    height: auto;
-
     .hero-landing {
-      height: auto;
+      height: auto; /* Allow content to dictate height */
+      padding-top: 56.25%; /* Maintain 16:9 aspect ratio for the video */
+    }
+
+    .ext-video-player iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
 
     .content {
-      flex-direction: column; /* Stack columns vertically */
+      flex-direction: column; /* Stack content */
       gap: 20px;
       margin: 0 3rem;
 
