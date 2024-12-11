@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def gallery
+    @shuffled_images = (1..32).to_a.shuffle
   end
 
   def teaching

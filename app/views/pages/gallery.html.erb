@@ -5,13 +5,13 @@
   </div>
 
   <div class="gallery-images">
-    <% (1..28).each do |i| %>
+    <% @shuffled_images.each do |i| %>
       <div
         class="thumbnail-container"
         data-action="click->lazy-image#open"
         data-lazy-image-full-src="<%= asset_path("gallery/large_gallery_#{i}.png") %>">
         <!-- Thumbnail image -->
-        <%= image_tag "gallery/small_gallery_#{i}.png",
+        <%= image_tag "gallery/small_gallery_bis_#{i}.png",
                       alt: "Image #{i}",
                       class: "portfolio-image",
                       loading: "lazy" %>

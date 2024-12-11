@@ -71,8 +71,9 @@ section.gallery-section {
       z-index: 20;
     }
     .modal-image {
-      width: 100%; /* Fit the screen width by default */
-      height: auto; /* Maintain aspect ratio */
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
       position: relative; /* Relative by default */
       transition: width 0.3s ease; /* Smooth zooming */
     }

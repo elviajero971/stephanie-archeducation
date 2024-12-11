@@ -14,6 +14,8 @@ export default class extends Controller {
 
             // Show the modal
             this.modalTarget.classList.add("active");
+
+            document.body.style.overflow = "hidden";
         }
     }
 
@@ -23,5 +25,7 @@ export default class extends Controller {
 
         // Clear the image source to save memory
         this.imageTarget.src = "";
+
+        document.body.style.overflow = "";
     }
 }
