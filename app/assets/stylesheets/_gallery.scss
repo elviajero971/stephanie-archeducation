@@ -37,8 +37,30 @@ section.gallery-section {
         }
       }
     }
-
   }
+
+  .videos-container {
+    margin: 40px 80px; /* Add horizontal margin */
+    width: calc(100% - 320px); /* Account for the margin */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between videos */
+    align-items: center; /* Center videos horizontally */
+
+    .ext-video-player {
+      width: 100%; /* Full width of the container */
+      max-width: 1200px; /* Optional: Set a max width for large screens */
+      aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+      overflow: hidden; /* Prevent overflow issues */
+
+      iframe {
+        width: 100%; /* Full width of the container */
+        height: 100%; /* Maintain aspect ratio using parent */
+        border: none; /* Remove border */
+      }
+    }
+  }
+
 
   /* Modal Styling */
   .image-modal {
@@ -138,11 +160,28 @@ section.gallery-section {
         right: 10px;
       }
     }
+
+    .videos-container {
+      margin: 20px; /* Reduce horizontal margin */
+      width: calc(100% - 40px); /* Account for reduced margin */
+      gap: 15px; /* Reduce gap between videos */
+    }
   }
 }
 
 @media screen and (max-width: 480px) {
   section.gallery-section {
     margin: 2rem 1rem;
+
+
+    .videos-container {
+      margin: 0 10px; /* Minimal margin for very small screens */
+      width: calc(100% - 20px);
+      gap: 10px;
+
+      .ext-video-player {
+        max-width: 100%; /* Ensure it fits smaller screens */
+      }
+    }
   }
 }
