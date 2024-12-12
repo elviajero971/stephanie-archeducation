@@ -174,9 +174,9 @@ section.gallery-section {
     margin: 4rem 2rem;
 
     .videos-container {
-      margin: 0 10px; /* Minimal margin for very small screens */
-      width: calc(100% - 20px);
-      gap: 10px;
+      margin: 2rem; /* Minimal margin for very small screens */
+      width: 100%;
+      gap: 2rem;
 
       .ext-video-player {
         max-width: 100%; /* Ensure it fits smaller screens */
